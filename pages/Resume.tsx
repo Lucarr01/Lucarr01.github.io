@@ -16,146 +16,145 @@ const Resume: React.FC = () => {
         </button>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-        <div className="lg:col-span-2 space-y-16">
-          {/* Practical Experience */}
-          <section>
-            <div className="flex items-center gap-3 mb-10">
-              <div className="size-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                <span className="material-symbols-outlined text-primary">analytics</span>
-              </div>
-              <h2 className="text-white text-2xl font-bold">Practical Experience</h2>
+      <div className="space-y-16">
+        {/* Practical Experience */}
+        <section>
+          <div className="flex items-center gap-3 mb-10">
+            <div className="size-10 rounded-lg bg-primary/10 flex items-center justify-center">
+              <span className="material-symbols-outlined text-primary">analytics</span>
             </div>
-            
-            <div className="space-y-8">
-              {EXPERIENCES.map((exp, i) => (
-                <div key={i} className="liquid-glass p-8 rounded-xl relative group overflow-hidden border-l-4 border-primary/20 hover:border-primary transition-all duration-300">
-                  <div className="flex items-start gap-4 mb-6">
-                    {/* Placeholder for company logo if needed, otherwise using a stylized initial */}
-                    <div className="size-12 rounded-lg bg-white/5 flex items-center justify-center shrink-0 border border-white/10">
-                      <span className="text-primary font-black text-xl">{exp.company.charAt(0)}</span>
-                    </div>
-                    <div>
-                      <h3 className="text-white text-xl font-bold">{exp.company}</h3>
-                      <div className="flex flex-wrap items-center gap-x-2 text-sm text-slate-400">
-                        {exp.totalPeriod && <span>{exp.totalPeriod}</span>}
-                        {exp.totalPeriod && exp.location && <span className="text-slate-600">•</span>}
-                        {exp.location && <span>{exp.location}</span>}
-                      </div>
+            <h2 className="text-white text-2xl font-bold">Practical Experience</h2>
+          </div>
+          
+          <div className="space-y-8">
+            {EXPERIENCES.map((exp, i) => (
+              <div key={i} className="liquid-glass p-8 rounded-xl relative group overflow-hidden border-l-4 border-primary/20 hover:border-primary transition-all duration-300">
+                <div className="flex items-start gap-4 mb-6">
+                  {/* Placeholder for company logo if needed, otherwise using a stylized initial */}
+                  <div className="size-12 rounded-lg bg-white/5 flex items-center justify-center shrink-0 border border-white/10">
+                    <span className="text-primary font-black text-xl">{exp.company.charAt(0)}</span>
+                  </div>
+                  <div>
+                    <h3 className="text-white text-xl font-bold">{exp.company}</h3>
+                    <div className="flex flex-wrap items-center gap-x-2 text-sm text-slate-400">
+                      {exp.totalPeriod && <span>{exp.totalPeriod}</span>}
+                      {exp.totalPeriod && exp.location && <span className="text-slate-600">•</span>}
+                      {exp.location && <span>{exp.location}</span>}
                     </div>
                   </div>
+                </div>
 
-                  <div className="relative pl-6 border-l-2 border-white/5 space-y-8">
-                    {exp.roles.map((role, j) => (
-                      <div key={j} className="relative">
-                        {/* The dot on the timeline */}
-                        <div className={`absolute -left-[31px] top-1.5 size-3 rounded-full border-2 border-background-dark ${role.current ? 'bg-primary scale-125 shadow-[0_0_8px_rgba(17,82,212,0.6)]' : 'bg-slate-700'}`} />
-                        
-                        <div className="space-y-2">
-                          <div className="flex flex-wrap justify-between items-start gap-2">
-                            <h4 className="text-white font-bold">{role.title}</h4>
-                            <span className="text-[10px] font-bold uppercase tracking-widest text-slate-500 bg-white/5 px-2 py-0.5 rounded">
-                              {role.period}
-                            </span>
-                          </div>
-                          <p className="text-primary/80 text-xs font-medium uppercase tracking-wide">{role.type}</p>
-                          <p className="text-slate-400 text-sm leading-relaxed max-w-xl">
-                            {role.description}
-                          </p>
-                          
-                          {role.skills && (
-                            <div className="flex flex-wrap gap-2 pt-2">
-                              {role.skills.map((skill, k) => (
-                                <span key={k} className="flex items-center gap-1.5 text-[10px] font-bold text-slate-300 bg-white/5 px-2 py-1 rounded-md border border-white/5">
-                                  <span className="material-symbols-outlined text-[12px] text-primary">diamond</span>
-                                  {skill}
-                                </span>
-                              ))}
-                            </div>
-                          )}
+                <div className="relative pl-6 border-l-2 border-white/5 space-y-8">
+                  {exp.roles.map((role, j) => (
+                    <div key={j} className="relative">
+                      {/* The dot on the timeline */}
+                      <div className={`absolute -left-[31px] top-1.5 size-3 rounded-full border-2 border-background-dark ${role.current ? 'bg-primary scale-125 shadow-[0_0_8px_rgba(17,82,212,0.6)]' : 'bg-slate-700'}`} />
+                      
+                      <div className="space-y-2">
+                        <div className="flex flex-wrap justify-between items-start gap-2">
+                          <h4 className="text-white font-bold">{role.title}</h4>
+                          <span className="text-[10px] font-bold uppercase tracking-widest text-slate-500 bg-white/5 px-2 py-0.5 rounded">
+                            {role.period}
+                          </span>
                         </div>
+                        <p className="text-primary/80 text-xs font-medium uppercase tracking-wide">{role.type}</p>
+                        <p className="text-slate-400 text-sm leading-relaxed max-w-xl">
+                          {role.description}
+                        </p>
+                        
+                        {role.skills && (
+                          <div className="flex flex-wrap gap-2 pt-2">
+                            {role.skills.map((skill, k) => (
+                              <span key={k} className="flex items-center gap-1.5 text-[10px] font-bold text-slate-300 bg-white/5 px-2 py-1 rounded-md border border-white/5">
+                                <span className="material-symbols-outlined text-[12px] text-primary">diamond</span>
+                                {skill}
+                              </span>
+                            ))}
+                          </div>
+                        )}
                       </div>
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* Education */}
-          <section>
-            <div className="flex items-center gap-3 mb-8">
-              <div className="size-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                <span className="material-symbols-outlined text-primary">school</span>
-              </div>
-              <h2 className="text-white text-2xl font-bold">Education</h2>
-            </div>
-            <div className="grid grid-cols-1 gap-4">
-              {EDUCATION.map((edu, i) => (
-                <div key={i} className="liquid-glass p-6 rounded-xl hover:bg-white/[0.05] transition-colors">
-                  <div className="flex justify-between items-start gap-4 mb-2">
-                    <div>
-                      <h3 className="text-white font-bold text-lg">{edu.degree}</h3>
-                      <p className="text-primary text-sm">{edu.institution}</p>
                     </div>
-                    <span className="text-slate-500 text-[10px] font-bold uppercase tracking-wider bg-white/5 px-2 py-1 rounded">
-                      {edu.period}
-                    </span>
-                  </div>
-                  {edu.details && (
-                    <p className="text-slate-400 text-sm mt-3 border-l-2 border-white/10 pl-4 italic">
-                      {edu.details}
-                    </p>
-                  )}
+                  ))}
                 </div>
-              ))}
-            </div>
-          </section>
-        </div>
+              </div>
+            ))}
+          </div>
+        </section>
 
-        {/* Sidebar Skills */}
-        <div className="space-y-8">
-          <section>
-            <div className="flex items-center gap-3 mb-6">
+        {/* Education */}
+        <section>
+          <div className="flex items-center gap-3 mb-8">
+            <div className="size-10 rounded-lg bg-primary/10 flex items-center justify-center">
+              <span className="material-symbols-outlined text-primary">school</span>
+            </div>
+            <h2 className="text-white text-2xl font-bold">Education</h2>
+          </div>
+          <div className="grid grid-cols-1 gap-4">
+            {EDUCATION.map((edu, i) => (
+              <div key={i} className="liquid-glass p-6 rounded-xl hover:bg-white/[0.05] transition-colors">
+                <div className="flex justify-between items-start gap-4 mb-2">
+                  <div>
+                    <h3 className="text-white font-bold text-lg">{edu.degree}</h3>
+                    <p className="text-primary text-sm">{edu.institution}</p>
+                  </div>
+                  <span className="text-slate-500 text-[10px] font-bold uppercase tracking-wider bg-white/5 px-2 py-1 rounded">
+                    {edu.period}
+                  </span>
+                </div>
+                {edu.details && (
+                  <p className="text-slate-400 text-sm mt-3 border-l-2 border-white/10 pl-4 italic">
+                    {edu.details}
+                  </p>
+                )}
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Skills Section */}
+        <section>
+          <div className="flex items-center gap-3 mb-8">
+            <div className="size-10 rounded-lg bg-primary/10 flex items-center justify-center">
               <span className="material-symbols-outlined text-primary">terminal</span>
-              <h2 className="text-white text-xl font-bold">Skills & Tools</h2>
             </div>
-            <div className="liquid-glass p-6 rounded-xl space-y-8">
-              {SKILLS.map((skill, i) => (
-                <div key={i}>
-                  <h4 className="text-white text-[10px] font-bold uppercase tracking-widest mb-4 opacity-60">{skill.category}</h4>
-                  <div className="flex flex-wrap gap-2">
-                    {skill.items.map((item, j) => (
-                      <span key={j} className={`px-3 py-1.5 rounded-lg text-xs font-semibold ${skill.category === 'Programming' ? 'bg-primary/20 text-primary border border-primary/20' : 'bg-white/5 text-slate-300'}`}>
-                        {item}
-                      </span>
-                    ))}
-                  </div>
+            <h2 className="text-white text-2xl font-bold">Skills & Tools</h2>
+          </div>
+          <div className="liquid-glass p-6 rounded-xl space-y-8">
+            {SKILLS.map((skill, i) => (
+              <div key={i}>
+                <h4 className="text-white text-[10px] font-bold uppercase tracking-widest mb-4 opacity-60">{skill.category}</h4>
+                <div className="flex flex-wrap gap-2">
+                  {skill.items.map((item, j) => (
+                    <span key={j} className={`px-3 py-1.5 rounded-lg text-xs font-semibold ${skill.category === 'Programming' ? 'bg-primary/20 text-primary border border-primary/20' : 'bg-white/5 text-slate-300'}`}>
+                      {item}
+                    </span>
+                  ))}
                 </div>
-              ))}
-            </div>
-          </section>
+              </div>
+            ))}
+          </div>
+        </section>
 
-          <section className="bg-primary/10 backdrop-blur-md border border-primary/20 p-6 rounded-xl relative overflow-hidden">
-            <div className="absolute top-0 right-0 p-2 opacity-10">
-              <span className="material-symbols-outlined text-[60px]">contact_mail</span>
+        {/* Contact Details */}
+        <section className="bg-primary/10 backdrop-blur-md border border-primary/20 p-6 rounded-xl relative overflow-hidden">
+          <div className="absolute top-0 right-0 p-2 opacity-10">
+            <span className="material-symbols-outlined text-[60px]">contact_mail</span>
+          </div>
+          <h3 className="text-white font-bold mb-2">Contact Details</h3>
+          <div className="space-y-3 mt-4">
+            <div className="flex items-center gap-3 text-sm text-slate-300">
+              <span className="material-symbols-outlined text-primary text-[18px]">mail</span>
+              <span>rippeluca@gmail.com</span>
             </div>
-            <h3 className="text-white font-bold mb-2">Contact Details</h3>
-            <div className="space-y-3 mt-4">
-              <div className="flex items-center gap-3 text-sm text-slate-300">
-                <span className="material-symbols-outlined text-primary text-[18px]">mail</span>
-                <span>rippeluca@gmail.com</span>
-              </div>
-              <div className="flex items-center gap-3 text-sm text-slate-300">
-                <span className="material-symbols-outlined text-primary text-[18px]">call</span>
-                <span>+49 15259801138</span>
-              </div>
+            <div className="flex items-center gap-3 text-sm text-slate-300">
+              <span className="material-symbols-outlined text-primary text-[18px]">call</span>
+              <span>+49 15259801138</span>
             </div>
-            <button className="w-full mt-6 py-3 bg-primary text-white font-bold rounded-lg text-sm hover:brightness-110 transition-all shadow-xl shadow-primary/20">
-              Get In Touch
-            </button>
-          </section>
-        </div>
+          </div>
+          <button className="w-full mt-6 py-3 bg-primary text-white font-bold rounded-lg text-sm hover:brightness-110 transition-all shadow-xl shadow-primary/20">
+            Get In Touch
+          </button>
+        </section>
       </div>
     </div>
   );
