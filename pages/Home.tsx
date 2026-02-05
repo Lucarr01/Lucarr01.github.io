@@ -11,7 +11,7 @@ const Home: React.FC = () => {
         <div className="flex flex-col md:flex-row gap-8 items-center">
           <div className="relative">
             <div 
-              className="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-32 w-32 md:h-40 md:w-40 border-4 border-primary/20" 
+              className="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-32 w-32 md:h-40 md:w-40 overflow-hidden" 
               style={{ backgroundImage: 'url("/profile-picture.png")' }}
             />
             <div className="absolute bottom-2 right-2 bg-green-500 w-5 h-5 rounded-full border-4 border-background-dark animate-pulse"></div>
