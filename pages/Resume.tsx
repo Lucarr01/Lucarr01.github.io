@@ -2,6 +2,33 @@
 import React from 'react';
 import { EXPERIENCES, SKILLS, EDUCATION } from '../constants';
 
+// Function to get company logo based on company name
+const getCompanyLogo = (companyName: string): string | null => {
+  const logoMap: { [key: string]: string } = {
+    'DFKI': '/dfki_logo.jpeg',
+    'German Research Center for Artificial Intelligence': '/dfki_logo.jpeg',
+    'CEWE': '/cewe_color_logo.jpeg',
+    'CEWE Group': '/cewe_color_logo.jpeg',
+    'YAZAKI': '/yazaki_europe_logo.jpeg',
+    'YAZAKI Systems Technologies GmbH': '/yazaki_europe_logo.jpeg',
+  };
+  
+  // Check for exact match first
+  if (logoMap[companyName]) {
+    return logoMap[companyName];
+  }
+  
+  // Check for partial match (case-insensitive)
+  const upperCompany = companyName.toUpperCase();
+  for (const [key, logo] of Object.entries(logoMap)) {
+    if (upperCompany.includes(key.toUpperCase())) {
+      return logo;
+    }
+  }
+  
+  return null;
+};
+
 const Resume: React.FC = () => {
   return (
     <div className="px-6 md:px-20 lg:px-40 py-12 max-w-[1200px] mx-auto animate-in fade-in duration-500">
@@ -30,10 +57,20 @@ const Resume: React.FC = () => {
             {EXPERIENCES.map((exp, i) => (
               <div key={i} className="liquid-glass p-8 rounded-xl relative group overflow-hidden border-l-4 border-primary/20 hover:border-primary transition-all duration-300">
                 <div className="flex items-start gap-4 mb-6">
-                  {/* Placeholder for company logo if needed, otherwise using a stylized initial */}
-                  <div className="size-12 rounded-lg bg-white/5 flex items-center justify-center shrink-0 border border-white/10">
-                    <span className="text-primary font-black text-xl">{exp.company.charAt(0)}</span>
-                  </div>
+                  {/* Company logo or stylized initial */}
+                  {getCompanyLogo(exp.company) ? (
+                    <div className="size-12 rounded-lg bg-white/5 flex items-center justify-center shrink-0 border border-white/10 overflow-hidden p-1">
+                      <img 
+                        src={getCompanyLogo(exp.company)!} 
+                        alt={`${exp.company} logo`}
+                        className="w-full h-full object-contain"
+                      />
+                    </div>
+                  ) : (
+                    <div className="size-12 rounded-lg bg-white/5 flex items-center justify-center shrink-0 border border-white/10">
+                      <span className="text-primary font-black text-xl">{exp.company.charAt(0)}</span>
+                    </div>
+                  )}
                   <div>
                     <h3 className="text-white text-xl font-bold">{exp.company}</h3>
                     <div className="flex flex-wrap items-center gap-x-2 text-sm text-slate-400">
