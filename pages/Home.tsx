@@ -12,7 +12,7 @@ const Home: React.FC = () => {
           <div className="relative">
             <div 
               className="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-32 w-32 md:h-40 md:w-40 border-4 border-primary/20" 
-              style={{ backgroundImage: 'url("https://lh3.googleusercontent.com/aida-public/AB6AXuBYEFOuMMYGQ4VxlMA8-qq7wluezXefyEdMjnTWB-aV0KnZ6kVAPGtRuzwOz_WcBBlvPjv-TIdXcDmhn7JLCKUzW-mvfgA6ueiOz5AbJQo9-GefBpGibBMqOBcI0znWmpMyYsaHt68p7vsmiFyZXLKcuZeS0e2i0KTRrRN2rKPoROyuTTqjKgSZRNon-0ssZqPMPfwyRYPZvlyOE7VRGr-m2aOYxl0E33LkKbE_9uKvvPdQJk8n88THguEFlQH_M_mVJ_e0EHkB8FM")' }}
+              style={{ backgroundImage: 'url("/profile-picture.png")' }}
             />
             <div className="absolute bottom-2 right-2 bg-green-500 w-5 h-5 rounded-full border-4 border-background-dark animate-pulse"></div>
           </div>
