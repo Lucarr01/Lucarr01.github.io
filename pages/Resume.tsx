@@ -59,11 +59,11 @@ const Resume: React.FC = () => {
                 <div className="flex items-start gap-4 mb-6">
                   {/* Company logo or stylized initial */}
                   {getCompanyLogo(exp.company) ? (
-                    <div className="size-12 rounded-lg bg-white/5 flex items-center justify-center shrink-0 border border-white/10 overflow-hidden p-1">
+                    <div className="size-12 rounded-lg bg-white/5 flex items-center justify-center shrink-0 border border-white/10 overflow-hidden">
                       <img 
                         src={getCompanyLogo(exp.company)!} 
                         alt={`${exp.company} logo`}
-                        className="w-full h-full object-contain"
+                        className="w-full h-full object-cover rounded-lg"
                       />
                     </div>
                   ) : (
@@ -102,8 +102,7 @@ const Resume: React.FC = () => {
                         {role.skills && (
                           <div className="flex flex-wrap gap-2 pt-2">
                             {role.skills.map((skill, k) => (
-                              <span key={k} className="flex items-center gap-1.5 text-[10px] font-bold text-slate-300 bg-white/5 px-2 py-1 rounded-md border border-white/5">
-                                <span className="material-symbols-outlined text-[12px] text-primary">diamond</span>
+                              <span key={k} className="text-[10px] font-bold text-slate-300 bg-white/5 px-2 py-1 rounded-md border border-white/5">
                                 {skill}
                               </span>
                             ))}
@@ -172,26 +171,6 @@ const Resume: React.FC = () => {
           </div>
         </section>
 
-        {/* Contact Details */}
-        <section className="bg-primary/10 backdrop-blur-md border border-primary/20 p-6 rounded-xl relative overflow-hidden">
-          <div className="absolute top-0 right-0 p-2 opacity-10">
-            <span className="material-symbols-outlined text-[60px]">contact_mail</span>
-          </div>
-          <h3 className="text-white font-bold mb-2">Contact Details</h3>
-          <div className="space-y-3 mt-4">
-            <div className="flex items-center gap-3 text-sm text-slate-300">
-              <span className="material-symbols-outlined text-primary text-[18px]">mail</span>
-              <span>rippeluca@gmail.com</span>
-            </div>
-            <div className="flex items-center gap-3 text-sm text-slate-300">
-              <span className="material-symbols-outlined text-primary text-[18px]">call</span>
-              <span>+49 15259801138</span>
-            </div>
-          </div>
-          <button className="w-full mt-6 py-3 bg-primary text-white font-bold rounded-lg text-sm hover:brightness-110 transition-all shadow-xl shadow-primary/20">
-            Get In Touch
-          </button>
-        </section>
       </div>
     </div>
   );

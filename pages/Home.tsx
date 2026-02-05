@@ -14,13 +14,11 @@ const Home: React.FC = () => {
               className="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-32 w-32 md:h-40 md:w-40 overflow-hidden" 
               style={{ backgroundImage: 'url("/profile-picture.png")' }}
             />
-            <div className="absolute bottom-2 right-2 bg-green-500 w-5 h-5 rounded-full border-4 border-background-dark animate-pulse"></div>
           </div>
           
           <div className="flex-1 text-center md:text-left">
             <div className="flex flex-col md:flex-row items-center md:items-baseline gap-3 mb-2">
               <h1 className="text-3xl font-bold tracking-tight">Luca Rippe</h1>
-              <span className="text-primary text-xs font-semibold px-2 py-1 rounded bg-primary/10 border border-primary/20">Available for Work</span>
             </div>
             <p className="text-slate-400 text-lg font-medium mb-4">Full-Stack Developer | Specialized in Modern Web Architectures</p>
             
