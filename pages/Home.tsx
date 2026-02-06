@@ -29,8 +29,8 @@ const Home: React.FC = () => {
         <div className="flex flex-col md:flex-row gap-8 items-center">
           <div className="relative">
             <div 
-              className="bg-center bg-no-repeat aspect-square bg-cover h-32 w-32 md:h-40 md:w-40 overflow-hidden border-2 border-primary/50 profile-blob" 
-              style={{ backgroundImage: 'url("/profile-picture.png")' }}
+              className="bg-center bg-no-repeat aspect-square bg-cover h-32 w-32 md:h-40 md:w-40 overflow-hidden border-2 border-primary/50" 
+              style={{ backgroundImage: 'url("/profile-picture.png")', borderRadius: '60% 40% 30% 70% / 60% 30% 70% 40%' }}
             />
           </div>
           

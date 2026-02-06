@@ -1,10 +1,6 @@
 /* Additional styles if needed */
 /* Most styles are handled by Tailwind CSS via CDN */
 
-.profile-blob {
-  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-}
-
 @keyframes blink {
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
