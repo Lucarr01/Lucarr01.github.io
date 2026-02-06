@@ -20,17 +20,6 @@ export const PROJECTS: Project[] = [
     ],
     methodology: [],
     gallery: []
-  },
-  {
-    id: 'nlp-analytics-tool',
-    title: 'NLP Customer Analytics',
-    description: 'An automated tool for analyzing customer feedback and support reviews using BERT-based models.',
-    thumbnail: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDnE3LJP12emEhqhw8unu3FPxUxPGuM3U_Xqbjj34hwEZtvVIva3bxC2viuP6MYFw8zH3ppwSUF-2xGZUs_7DEsxVuWWFzJgmy7kWw3Sfbb7iO-Lk3j7mMqdYXkSau5yB440Icyr027wZflrhqJ1KKt6e8xdSGe1C1yktv8zAAvDBWJru36GUajcmrcqCKpehphGwAbA6TUDCIyL7qw_cIp0QSACedd5MAKjQfpz23OIsWbueRBk_CW5Qp8Aq-GtozbbtiKb3WgKwc',
-    tags: ['NLP', 'BERT', 'Python', 'FastAPI'],
-    fullDescription: [],
-    techStack: [],
-    methodology: [],
-    gallery: []
   }
 ];
 
