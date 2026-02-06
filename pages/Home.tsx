@@ -25,7 +25,7 @@ const Home: React.FC = () => {
   return (
     <div className="px-6 md:px-20 lg:px-40 py-10 max-w-[1200px] mx-auto">
       {/* Profile Header */}
-      <section className="liquid-glass rounded-xl p-8 mb-6 animate-in fade-in slide-in-from-bottom-4 duration-700">
+      <section className="liquid-glass rounded-xl p-8 mb-12 animate-in fade-in slide-in-from-bottom-4 duration-700">
         <div className="flex flex-col md:flex-row gap-8 items-center">
           <div className="relative">
             <div 
@@ -50,36 +50,49 @@ const Home: React.FC = () => {
             </p>
           </div>
         </div>
-      </section>
 
-      {/* Quick Info Details Card */}
-      <section className="liquid-glass rounded-xl p-6 mb-12 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-100">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-12 text-sm text-slate-500">
-          <div className="flex items-center gap-3 justify-center md:justify-start">
-            <div className="size-8 rounded-lg bg-primary/10 flex items-center justify-center">
+        {/* Info Icons */}
+        <div className="flex justify-center gap-6 pt-6 mt-6 border-t border-white/10">
+          {/* School */}
+          <div className="relative group">
+            <div className="size-10 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors cursor-default">
               <span className="material-symbols-outlined text-primary text-[20px]">school</span>
             </div>
-            <span>M.Sc Applied Economics and Data Science • University of Oldenburg</span>
+            <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-1.5 rounded-lg bg-slate-800 border border-white/10 text-xs text-slate-200 whitespace-nowrap opacity-0 translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-200">
+              M.Sc Applied Economics and Data Science &bull; University of Oldenburg
+            </div>
           </div>
-          <div className="flex items-center gap-3 justify-center md:justify-start">
-            <div className="size-8 rounded-lg bg-primary/10 flex items-center justify-center">
+
+          {/* Work */}
+          <div className="relative group">
+            <div className="size-10 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors cursor-default">
               <span className="material-symbols-outlined text-primary text-[20px]">work</span>
             </div>
-            <span>Research Assistant • German Research Center for Artificial Intelligence</span>
+            <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-1.5 rounded-lg bg-slate-800 border border-white/10 text-xs text-slate-200 whitespace-nowrap opacity-0 translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-200">
+              Research Assistant &bull; German Research Center for Artificial Intelligence
+            </div>
           </div>
-          <a href="https://www.linkedin.com/in/luca-rippe-b93a69217" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 justify-center md:justify-start hover:text-primary transition-colors group">
-            <div className="size-8 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+
+          {/* LinkedIn */}
+          <a href="https://www.linkedin.com/in/luca-rippe-b93a69217" target="_blank" rel="noopener noreferrer" className="relative group">
+            <div className="size-10 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
               <svg className="size-5 fill-primary" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
               </svg>
             </div>
-            <span>Connect with me</span>
+            <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-1.5 rounded-lg bg-slate-800 border border-white/10 text-xs text-slate-200 whitespace-nowrap opacity-0 translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-200">
+              Connect with me
+            </div>
           </a>
-          <div className="flex items-center gap-3 justify-center md:justify-start">
-            <div className="size-8 rounded-lg bg-primary/10 flex items-center justify-center">
+
+          {/* Language */}
+          <div className="relative group">
+            <div className="size-10 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors cursor-default">
               <span className="material-symbols-outlined text-primary text-[20px]">language</span>
             </div>
-            <span>German (Native), English (Fluent)</span>
+            <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-1.5 rounded-lg bg-slate-800 border border-white/10 text-xs text-slate-200 whitespace-nowrap opacity-0 translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-200">
+              German (Native), English (Fluent)
+            </div>
           </div>
         </div>
       </section>
