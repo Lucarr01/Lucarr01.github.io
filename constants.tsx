@@ -27,8 +27,8 @@ export const PROJECTS: Project[] = [
       { category: 'ML Framework', value: 'PyTorch' },
       { category: 'API', value: 'FastAPI' },
       { category: 'Data & Logic', value: 'Knowledge Graph (Neo4j)' },
-      { category: 'LLM Integration', value: 'RAG Pipeline' },
-      { category: 'Deployment', value: 'Docker & docker-compose' },
+      { category: 'LLM Integration', value: 'RAG' },
+      { category: 'Deployment', value: 'Docker' },
       { category: 'Monitoring', value: 'Prometheus & Grafana' }
     ],
     methodology: [],

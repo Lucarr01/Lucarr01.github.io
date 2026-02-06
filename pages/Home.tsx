@@ -137,9 +137,9 @@ const Home: React.FC = () => {
               </div>
               <p className="text-slate-400 text-sm line-clamp-2 leading-relaxed">{project.description}</p>
               <div className="mt-auto flex flex-wrap gap-2 pt-2">
-                {project.tags.slice(0, 3).map((tag, i) => (
+                {project.techStack.map((tech, i) => (
                   <span key={i} className="text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded bg-white/5 text-slate-300 border border-white/5">
-                    {tag}
+                    {tech.value}
                   </span>
                 ))}
               </div>
