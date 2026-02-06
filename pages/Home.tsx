@@ -20,12 +20,12 @@ const Home: React.FC = () => {
             <div className="flex flex-col md:flex-row items-center md:items-baseline gap-3 mb-2">
               <h1 className="text-3xl font-bold tracking-tight">Luca Rippe</h1>
             </div>
-            <p className="text-slate-400 text-lg font-medium mb-4">Full-Stack Developer | Specialized in Modern Web Architectures</p>
+            <p className="text-slate-400 text-lg font-medium mb-4">Machine Learning Engineer | Applied Research & Reliable ML Systems</p>
             
             <p className="text-slate-300 text-sm leading-relaxed max-w-2xl">
-              I am a passionate software engineer dedicated to building seamless digital experiences. 
-              With a deep focus on performance and clean code, I bridge the gap between complex 
-              backend logic and intuitive frontend design to create products that scale.
+            I am a Master’s student in Applied Economics and Data Science with a strong focus on machine learning and data-driven methods. 
+            My experience includes applied research and industry projects in areas such as NLP, Visual Question Answering, and uncertainty-aware modeling. 
+            I am particularly interested in developing robust and reliable ML systems for real-world applications.
             </p>
           </div>
         </div>
@@ -38,13 +38,13 @@ const Home: React.FC = () => {
             <div className="size-8 rounded-lg bg-primary/10 flex items-center justify-center">
               <span className="material-symbols-outlined text-primary text-[20px]">school</span>
             </div>
-            <span>B.S. Computer Science • Stanford University</span>
+            <span>M.Sc Applied Economics and Data Science • University of Oldenburg</span>
           </div>
           <div className="flex items-center gap-3 justify-center md:justify-start">
             <div className="size-8 rounded-lg bg-primary/10 flex items-center justify-center">
               <span className="material-symbols-outlined text-primary text-[20px]">work</span>
             </div>
-            <span>5+ Years Experience • Ex-Google, Fintech startups</span>
+            <span>Research Assistant • German Research Center for Artificial Intelligence</span>
           </div>
           <a href="#" className="flex items-center gap-3 justify-center md:justify-start hover:text-primary transition-colors group">
             <div className="size-8 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
@@ -58,7 +58,7 @@ const Home: React.FC = () => {
             <div className="size-8 rounded-lg bg-primary/10 flex items-center justify-center">
               <span className="material-symbols-outlined text-primary text-[20px]">language</span>
             </div>
-            <span>English, Spanish, Javascript, Go</span>
+            <span>German (Native), English (Fluent)</span>
           </div>
         </div>
       </section>
