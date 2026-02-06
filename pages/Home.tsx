@@ -1,9 +1,27 @@
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { PROJECTS } from '../constants';
 
+const FULL_NAME = 'Luca Rippe';
+
 const Home: React.FC = () => {
+  const [displayedName, setDisplayedName] = useState('');
+  const [doneTyping, setDoneTyping] = useState(false);
+
+  useEffect(() => {
+    let index = 0;
+    const interval = setInterval(() => {
+      index++;
+      setDisplayedName(FULL_NAME.slice(0, index));
+      if (index >= FULL_NAME.length) {
+        clearInterval(interval);
+        setDoneTyping(true);
+      }
+    }, 100);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="px-6 md:px-20 lg:px-40 py-10 max-w-[1200px] mx-auto">
       {/* Profile Header */}
@@ -11,14 +29,17 @@ const Home: React.FC = () => {
         <div className="flex flex-col md:flex-row gap-8 items-center">
           <div className="relative">
             <div 
-              className="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-32 w-32 md:h-40 md:w-40 overflow-hidden" 
+              className="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-32 w-32 md:h-40 md:w-40 overflow-hidden ring-2 ring-primary/50 ring-offset-2 ring-offset-[#0a0f1a]" 
               style={{ backgroundImage: 'url("/profile-picture.png")' }}
             />
           </div>
           
           <div className="flex-1 text-center md:text-left">
             <div className="flex flex-col md:flex-row items-center md:items-baseline gap-3 mb-2">
-              <h1 className="text-3xl font-bold tracking-tight">Luca Rippe</h1>
+              <h1 className="text-3xl font-bold tracking-tight">
+                {displayedName}
+                <span className={`inline-block w-[2px] h-[1em] bg-slate-100 ml-0.5 align-middle ${doneTyping ? 'animate-blink' : ''}`} />
+              </h1>
             </div>
             <p className="text-slate-400 text-lg font-medium mb-4">Machine Learning Engineer | Applied Research & Reliable ML Systems</p>
             
@@ -46,13 +67,13 @@ const Home: React.FC = () => {
             </div>
             <span>Research Assistant • German Research Center for Artificial Intelligence</span>
           </div>
-          <a href="#" className="flex items-center gap-3 justify-center md:justify-start hover:text-primary transition-colors group">
+          <a href="https://www.linkedin.com/in/luca-rippe-b93a69217" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 justify-center md:justify-start hover:text-primary transition-colors group">
             <div className="size-8 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
               <svg className="size-5 fill-primary" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a2.7 2.7 0 0 0-2.7-2.7c-1.1 0-2 .6-2.5 1.4V10h-3v8.5h3v-4.8a1.5 1.5 0 0 1 1.5-1.5 1.5 1.5 0 0 1 1.5 1.5v4.8h3M6.5 10H9v8.5H6.5V10M8 6.5A1.3 1.3 0 0 1 6.8 7.8 1.3 1.3 0 0 1 5.5 6.5 1.3 1.3 0 0 1 6.8 5.2 1.3 1.3 0 0 1 8 6.5z"/>
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
               </svg>
             </div>
-            <span>linkedin.com/in/lucarippe</span>
+            <span>Connect with me</span>
           </a>
           <div className="flex items-center gap-3 justify-center md:justify-start">
             <div className="size-8 rounded-lg bg-primary/10 flex items-center justify-center">
