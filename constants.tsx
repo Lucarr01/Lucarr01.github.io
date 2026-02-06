@@ -3,25 +3,39 @@ import { Project, Experience, Skill, Education } from './types';
 
 export const PROJECTS: Project[] = [
   {
-    id: 'vqa-calibration',
-    title: 'VQA Uncertainty Calibration',
-    description: 'Research project focused on improving the reliability of Visual Question Answering models in medical contexts.',
+    id: 'visual-quality-decision-support',
+    title: 'Visual Quality Decision Support',
+    description:
+      'End-to-end machine learning system for automated visual quality inspection of industrial components, with integrated decision support.',
     fullDescription: [
-      'This research focuses on Visual Question Answering (VQA) with a heavy emphasis on uncertainty quantification and model calibration.',
-      'Developed as part of my Master Thesis at the University of Oldenburg in collaboration with DFKI.',
-      'The goal is to increase the trustworthiness of AI-driven medical diagnostic tools by providing reliable confidence scores for every model prediction.'
+      'This project implements a production-oriented end-to-end ML system for visual quality inspection in an automotive-like industrial setting.',
+      'A computer vision model detects defects in component images and estimates defect type and severity with reproducible training pipelines.',
+      'Predictions are served via a versioned REST API and enriched with deterministic decision logic using a knowledge graph.',
+      'A retrieval-augmented generation (RAG) component provides traceable, document-backed quality and process recommendations.',
+      'The project is designed as a GitHub portfolio project to demonstrate ML engineering, deployment, monitoring, and system integration skills rather than maximizing model accuracy.'
     ],
-    thumbnail: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDVxjnURHhKx_kuPOz66QuVQ98112cRkIdP9P8QkbW8B26HHGe2bZbCRU58XTWaKLCQnn1W_obn3A38m207lCm_R4w1ZIreCle3X2A84zhh2dcLNG9_PSuWyhHxdpyaWCnRv_bID0kSc_QZMBLAvwOwYHvo2hLSC6-gWDLM7MJoME7YN1JJWHGJEW7KsFAnDj9lIWP5cA4Tq7L2t9SqCyMJwlP-UQsPAMZrNaPWI2GEvHwADSn9dnfpB9x8Axrh3EjcdrsTRN0zvAo',
-    tags: ['PyTorch', 'Deep Learning', 'Computer Vision', 'NLP'],
+    thumbnail:
+      'https://lh3.googleusercontent.com/aida-public/AB6AXuDVxjnURHhKx_kuPOz66QuVQ98112cRkIdP9P8QkbW8B26HHGe2bZbCRU58XTWaKLCQnn1W_obn3A38m207lCm_R4w1ZIreCle3X2A84zhh2dcLNG9_PSuWyhHxdpyaWCnRv_bID0kSc_QZMBLAvwOwYHvo2hLSC6-gWDLM7MJoME7YN1JJWHGJEW7KsFAnDj9lIWP5cA4Tq7L2t9SqCyMJwlP-UQsPAMZrNaPWI2GEvHwADSn9dnfpB9x8Axrh3EjcdrsTRN0zvAo',
+    tags: [
+      'Machine Learning Engineering',
+      'Computer Vision',
+      'MLOps',
+      'Decision Support Systems',
+      'Industrial AI'
+    ],
     techStack: [
-      { category: 'Framework', value: 'PyTorch' },
-      { category: 'Architecture', value: 'Transformers' },
-      { category: 'Technique', value: 'Uncertainty Quant.' }
+      { category: 'ML Framework', value: 'PyTorch' },
+      { category: 'API', value: 'FastAPI' },
+      { category: 'Data & Logic', value: 'Knowledge Graph (Neo4j)' },
+      { category: 'LLM Integration', value: 'RAG Pipeline' },
+      { category: 'Deployment', value: 'Docker & docker-compose' },
+      { category: 'Monitoring', value: 'Prometheus & Grafana' }
     ],
     methodology: [],
     gallery: []
   }
 ];
+
 
 export const EXPERIENCES: Experience[] = [
   {

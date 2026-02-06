@@ -45,7 +45,7 @@ const Footer: React.FC = () => (
     <div className="max-w-[1200px] mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
       <div className="flex items-center gap-4">
         <span className="material-symbols-outlined text-primary">code</span>
-        <p className="text-slate-500 text-sm">© 2024 Luca Rippe. Built with Modern Tech.</p>
+        <p className="text-slate-500 text-sm">© 2026 by Luca Rippe.</p>
       </div>
       <div className="flex gap-6">
         <a href="https://www.linkedin.com/in/luca-rippe-b93a69217" target="_blank" rel="noopener noreferrer" className="text-slate-500 hover:text-white transition-colors">
