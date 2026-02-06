@@ -29,7 +29,7 @@ const Home: React.FC = () => {
         <div className="flex flex-col md:flex-row gap-8 items-center">
           <div className="relative">
             <div 
-              className="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-32 w-32 md:h-40 md:w-40 overflow-hidden ring-2 ring-primary/50 ring-offset-2 ring-offset-[#0a0f1a]" 
+              className="bg-center bg-no-repeat aspect-square bg-cover h-32 w-32 md:h-40 md:w-40 overflow-hidden border-2 border-primary/50 profile-blob" 
               style={{ backgroundImage: 'url("/profile-picture.png")' }}
             />
           </div>
